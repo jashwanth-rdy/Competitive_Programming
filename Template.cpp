@@ -11,12 +11,14 @@ using namespace std;
 #define pb              push_back
 #define ppb             pop_back
 #define read(a)         for(auto &x : a) cin >> x;
-#define u_m             unordered_map
+#define ump             unordered_map
 #define pii             pair<int, int>
 #define F               first
 #define S               second
 #define sqrt(x)         sqrtl(x)
 #define all(x)          (x).begin(), (x).end()
+#define cyes            cout << "YES" << endl;
+#define cno             cout << "NO" << endl;
 
 int power(int a, int b, int m){ if(b == 0) return 1; int ans = power(a, b/2, m); ans = (ans * ans)%m; if(b&1) return (ans * a)%m; return ans;}
 int inv(int a, int m){ a %= m; return power(a, m - 2, m);}
