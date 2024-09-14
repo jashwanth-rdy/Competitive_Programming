@@ -4,10 +4,10 @@
 
 using namespace std;
 
-#define ll             long long
+#define int             long long
 #define vi              vector<int>
 #define vvi             vector<vi>
-#define vpii            vector<pair<int, int>>
+#define vpi             vector<pair<int, int>>
 #define pb              push_back
 #define ppb             pop_back
 #define read(a)         for(auto &x : a) cin >> x;
@@ -15,6 +15,7 @@ using namespace std;
 #define pii             pair<int, int>
 #define F               first
 #define S               second
+#define sqrt(x)         sqrtl(x)
 #define all(x)          (x).begin(), (x).end()
 #define cyes            cout << "YES" << endl;
 #define cno             cout << "NO" << endl;
@@ -31,10 +32,37 @@ int mod = 1e9 + 7;
 
 void solution()
 {
-
+    int n, k;
+    cin >> n >> k;
+    int ans = INT_MAX;
+    int prevsum = (k * (k - 1)) / 2;
+    int total = ((k + n - 1) * (k + n)) / 2;
+    if (n == 2)
+    {
+        ans = 1;
+    }else{
+        int i = 1, j = n - 1;
+        while(i<=j){
+            int mid = i + (j - i) / 2;
+            int leftsum = ((k + mid) * (k + mid + 1)) / 2;
+            int rightsum = total - leftsum;
+            int curr = abs(leftsum - rightsum);
+            ans = min(ans, curr);
+            int ll = leftsum - k - mid;
+            int lr = leftsum + k + mid + 1;
+            int rl = rightsum + k + mid;
+            int rr = rightsum - k - mid - 1;
+            if(abs(rl-ll)<curr){
+                j = mid - 1;e
+            }else{
+                i = mid + 1;
+            }
+        }
+    }
+    cout << ans << endl;
 }
 
-int main(){
+signed main(){
     ios_base::sync_with_stdio(false); 
     cin.tie(NULL); cout.tie(NULL);
     int t;

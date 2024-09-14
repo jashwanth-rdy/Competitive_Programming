@@ -4,10 +4,10 @@
 
 using namespace std;
 
-#define ll             long long
+#define int             long long
 #define vi              vector<int>
 #define vvi             vector<vi>
-#define vpii            vector<pair<int, int>>
+#define vpi             vector<pair<int, int>>
 #define pb              push_back
 #define ppb             pop_back
 #define read(a)         for(auto &x : a) cin >> x;
@@ -15,6 +15,7 @@ using namespace std;
 #define pii             pair<int, int>
 #define F               first
 #define S               second
+#define sqrt(x)         sqrtl(x)
 #define all(x)          (x).begin(), (x).end()
 #define cyes            cout << "YES" << endl;
 #define cno             cout << "NO" << endl;
@@ -31,10 +32,12 @@ int mod = 1e9 + 7;
 
 void solution()
 {
-
+    int a, b;
+    cin >> a >> b;
+    cout << b-a << endl;
 }
 
-int main(){
+signed main(){
     ios_base::sync_with_stdio(false); 
     cin.tie(NULL); cout.tie(NULL);
     int t;
